@@ -42,21 +42,21 @@
                     <div class="top_nav_container">
                         <a class="navbar-brand d-none d-lg-flex" href="index.php">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
                         <div class="contact_nav">
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call : +01 123455678990
-                </span>
+                                    Call : +01 123455678990
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  Email : demo@gmail.com
-                </span>
+                                    Email : demo@gmail.com
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -67,37 +67,63 @@
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
                         <a class="navbar-brand d-lg-none" href="index.php">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
+                            <span class=""> </span>
+                        </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link pl-lg-0" href="index.php">Home </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="service.html">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html"> About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="why.html">Why Us</a>
+                                <?php
+                                if (isset($_SESSION['type'])) {
+                                ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link pl-lg-0" href="index.php">Home </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="service.php">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.php"> About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="why.php">Why Us</a>
+                                    </li>
+                                    <?php
+                                    if ($_SESSION['type'] == 1) {
+                                    ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="manage.php"> Manage</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="signup.php">New Customer<span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                <?php
+                                } else { ?>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="track.php">Track</a>
+                                    </li>
+                                <?php              }
+                                ?>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.php">Log In<span class="sr-only">(current)</span> </a>
+                                    <a class="nav-link" href="php/logout.php">Log Out</a>
                                 </li>
                             </ul>
                             <from class="search_form">
                                 <input type="text" class="form-control" placeholder="Search here...">
                                 <button class="" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
                             </from>
                         </div>
                     </nav>
@@ -107,49 +133,104 @@
         <!-- end header section -->
     </div>
 
-    <!-- contact section -->
-    <section class="contact_section layout_padding">
 
-        <div class="container">
-            <div class="heading_container heading_center">
-                <!---align header-->
-                <h2>
-                    Log In
-                </h2>
-            </div>
-            <div class="row">
-                <div class="col-md-9 mx-auto">
-                    <div class="form_container">
-                        <form action="php/login.php" method="post">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" name="email" placeholder="email" required/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="password" class="form-control" name="password" placeholder="Password" required/>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="user">UserType:</label>
+    <!-- service section -->
 
-                                <select id="user" name="user" required>
-                                    <option value="1">Technician</option>
-                                    <option value="2">Customer</option>
-                                </select>
+    <section class="service_section layout_padding">
+        <div class="service_container">
+            <div class="container ">
+                <div class="heading_container heading_center">
+                    <h2>
+                        Our <span>Services</span>
+                    </h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/s1.png" alt="">
                             </div>
-                            <div class="btn-box col-md-6">
-                                <button type="submit">Log In</button>
+                            <div class="detail-box">
+                                <h5>
+                                    Computer Repair
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                </p>
+                                <a href="">
+                                    Read More
+                                </a>
                             </div>
-
-                        </form>
+                        </div>
                     </div>
+                    <div class="col-md-6 ">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/s2.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Hardware Replacement
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                </p>
+                                <a href="">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/s3.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Data Recovery
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                </p>
+                                <a href="">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/s4.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Software Update
+                                </h5>
+                                <p>
+                                    fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                                </p>
+                                <a href="">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="">
+                        See All
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- end contact section -->
+
+    <!-- end service section -->
 
     <!-- footer section -->
     <footer class="footer_section">
@@ -186,20 +267,20 @@
                         </h4>
                         <div class="footer_links">
                             <a class="active" href="index.php">
-                Home
-              </a>
-                            <a class="" href="service.html">
-                Services
-              </a>
-                            <a class="" href="about.html">
-                About
-              </a>
-                            <a class="" href="why.html">
-                Why Us
-              </a>
+                                Home
+                            </a>
+                            <a class="" href="service.php">
+                                Services
+                            </a>
+                            <a class="" href="about.php">
+                                About
+                            </a>
+                            <a class="" href="why.php">
+                                Why Us
+                            </a>
                             <a class="" href="contact.html">
-                Log In 
-              </a>
+                                Contact Us
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -212,32 +293,32 @@
                             <p>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
-                  Location
-                </span>
+                                    Location
+                                </span>
                             </p>
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call +01 1234567890
-                </span>
+                                    Call +01 1234567890
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  demo@gmail.com
-                </span>
+                                    demo@gmail.com
+                                </span>
                             </a>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Mon-Sat: 09.00 am - 06.00 pm
-                </span>
+                                    Mon-Sat: 09.00 am - 06.00 pm
+                                </span>
                             </p>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Sunday: closed
-                </span>
+                                    Sunday: closed
+                                </span>
                             </p>
                         </div>
                     </div>

@@ -88,13 +88,13 @@ session_start();
                                         <a class="nav-link pl-lg-0" href="index.php">Home </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="service.html">Services</a>
+                                        <a class="nav-link" href="service.php">Services</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about.html"> About</a>
+                                        <a class="nav-link" href="about.php"> About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="why.html">Why Us</a>
+                                        <a class="nav-link" href="why.php">Why Us</a>
                                     </li>
 
                                     <li class="nav-item active">
@@ -224,13 +224,13 @@ session_start();
                             <a class="active" href="index.php">
                                 Home
                             </a>
-                            <a class="" href="service.html">
+                            <a class="" href="service.php">
                                 Services
                             </a>
-                            <a class="" href="about.html">
+                            <a class="" href="about.php">
                                 About
                             </a>
-                            <a class="" href="why.html">
+                            <a class="" href="why.php">
                                 Why Us
                             </a>
                             <a class="" href="contact.html">

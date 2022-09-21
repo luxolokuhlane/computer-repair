@@ -42,21 +42,21 @@
                     <div class="top_nav_container">
                         <a class="navbar-brand d-none d-lg-flex" href="index.php">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
                         <div class="contact_nav">
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call : +01 123455678990
-                </span>
+                                    Call : +01 123455678990
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  Email : demo@gmail.com
-                </span>
+                                    Email : demo@gmail.com
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -67,64 +67,63 @@
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
                         <a class="navbar-brand d-lg-none" href="index.php">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
+                            <span class=""> </span>
+                        </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <?php
-                  if (isset($_SESSION['type'])) {
-                  ?>
+                                if (isset($_SESSION['type'])) {
+                                ?>
                                     <li class="nav-item">
                                         <a class="nav-link pl-lg-0" href="index.php">Home </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="service.html">Services</a>
+                                        <a class="nav-link" href="service.php">Services</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about.html"> About</a>
+                                        <a class="nav-link" href="about.php"> About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="why.html">Why Us</a>
+                                        <a class="nav-link" href="why.php">Why Us</a>
                                     </li>
                                     <?php
-                    if ($_SESSION['type'] == 1) {
-                    ?>
+                                    if ($_SESSION['type'] == 1) {
+                                    ?>
                                         <li class="nav-item">
                                             <a class="nav-link" href="manage.php"> Manage</a>
                                         </li>
-                                        <?php
-                    }
-                    ?>
-                                            <li class="nav-item active">
-                                                <a class="nav-link" href="signup.php">New Customer<span
-                                            class="sr-only">(current)</span>
-                                    </a>
-                                            </li>
-                                            <?php
-                  } else { ?>
-                                                <li class="nav-item active">
-                                                    <a class="nav-link" href="track.php">Track</a>
-                                                </li>
-                                                <?php              }
-                  ?>
-                                                <li class="nav-item active">
-                                                    <a class="nav-link" href="contact.html">Contact</a>
-                                                </li>
-                                                <li class="nav-item active">
-                                                    <a class="nav-link" href="php/logout.php">Log Out</a>
-                                                </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="signup.php">New Customer<span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                <?php
+                                } else { ?>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="track.php">Track</a>
+                                    </li>
+                                <?php              }
+                                ?>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="php/logout.php">Log Out</a>
+                                </li>
                             </ul>
                             <from class="search_form">
                                 <input type="text" class="form-control" placeholder="Search here...">
                                 <button class="" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
                             </from>
                         </div>
                     </nav>
@@ -151,8 +150,8 @@
                             Fast Business Funding is rapidly growing with over 55,000 loyal customers registered through its platform.
                         </p>
                         <a href="">
-              Read More
-            </a>
+                            Read More
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -201,20 +200,20 @@
                         </h4>
                         <div class="footer_links">
                             <a class="active" href="index.php">
-                Home
-              </a>
-                            <a class="" href="service.html">
-                Services
-              </a>
-                            <a class="" href="about.html">
-                About
-              </a>
-                            <a class="" href="why.html">
-                Why Us
-              </a>
+                                Home
+                            </a>
+                            <a class="" href="service.php">
+                                Services
+                            </a>
+                            <a class="" href="about.php">
+                                About
+                            </a>
+                            <a class="" href="why.php">
+                                Why Us
+                            </a>
                             <a class="" href="contact.html">
-                Contact Us
-              </a>
+                                Contact Us
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -227,32 +226,32 @@
                             <p>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
-                  Location
-                </span>
+                                    Location
+                                </span>
                             </p>
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call +01 1234567890
-                </span>
+                                    Call +01 1234567890
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  demo@gmail.com
-                </span>
+                                    demo@gmail.com
+                                </span>
                             </a>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Mon-Sat: 09.00 am - 06.00 pm
-                </span>
+                                    Mon-Sat: 09.00 am - 06.00 pm
+                                </span>
                             </p>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Sunday: closed
-                </span>
+                                    Sunday: closed
+                                </span>
                             </p>
                         </div>
                     </div>
