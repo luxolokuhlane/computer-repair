@@ -6,24 +6,34 @@
     $password = md5($password);
     
     //get username from signup.php
-    $username = $_POST['name'];
+    $firstname = $_POST['name'];
 
     //get email from signup.php
     $email = $_POST['email'];
 
     //get name from signup.php
-    $name = $_POST['lastname'];
+    $lastname = $_POST['lastname'];
+
+    //get phone from signup.php
+    $phone = $_POST['phone'];
+    
+    //signup type
+    $type = $_POST['type'];
 
 
     //connect to database from config.php
-    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) 
+    $conn = mysqli_connect(HOST,USERNAME, PASSWORD, DATABASE) 
     or die('Error connecting to MySQL server.');
 
-    //insert new user into database
-    $query = "INSERT INTO users (username, password, email, name) VALUES ('$username', '$password', '$email', '$name')";
-
+    if($type == 3 or $type == 2){
+        //insert new user into database
+        $query = "INSERT INTO technician (firstname, lastname, email, password, phone, usertype) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', $type)";
+    }else{
+        $query = "INSERT INTO customer (firstname, lastname, email, password, phone) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+    }
+    
     //execute query
-    mysqli_query($conn, $query) or die('Error querying database.');
+    mysqli_query($conn, $query) or die('Error adding user database.');
     
     //query successful so redirect to login page
     header("Location: login.php");

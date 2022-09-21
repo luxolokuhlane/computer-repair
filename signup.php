@@ -103,16 +103,15 @@ session_start();
                                 <li class="nav-item active">
                                     <a class="nav-link" href="contacts.html">contact</a>
                                 </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="signup.php">new User<span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
                                 <?php
                                 } else {
                                 ?>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="login.php">login</a>
-                                </li>
-
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="signup.php">signup<span class="sr-only">(current)</span>
-                                    </a>
                                 </li>
                                 <?php
                                 }
@@ -144,7 +143,16 @@ session_start();
             <div class="row">
                 <div class="col-md-9 mx-auto">
                     <div class="form_container">
-                        <form action="new.php">
+                        <form action="new.php" method="post">
+                            <div class="form-group col-md-6">
+                                <label for="type">UserType:</label>
+
+                                <select id="type">
+                                    <option value="1">Admin</option>
+                                    <option value="2">Technician</option>
+                                    <option value="3">Customer</option>
+                                </select>
+                            </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <input type="text" class="form-control" id="name" placeholder="First Name" />
