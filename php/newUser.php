@@ -19,6 +19,7 @@ var_dump($_POST);
     
     //signup type
     $type = $_POST['type'];
+    
 
 
     //connect to database from config.php
@@ -26,20 +27,26 @@ var_dump($_POST);
     or die('Error connecting to MySQL server.');
 
     if($type == 1 or $type == 2){
+        mysqli_query($conn, "SET FOREIGN_KEY_CHECKS=0;") or die(mysqli_error($conn));
         //insert new user into database
-        $query = "INSERT INTO technician (firstName, lastName, email, password, contactNumber, technicianType) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', '$type');";
+        $query = "INSERT INTO `team8`.`technician` (firstName, lastName, email, password, contactNumber, technicianType) 
+                    VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', '$type')";
     }elseif($type == 3){
     
-        $query = "INSERT INTO client (firstName, lastName, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone');";
+        $query = "INSERT INTO client (firstName, lastName, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
     }else{
         echo "Error";
     }
-    
-    //execute query
-    mysqli_query($conn, $query) or die('Error adding user database.');
-    
-    //query successful so redirect to login page
-    header("Location: login.php");
+
+        //execute query
+        if ($conn->query($query) === TRUE
+        ) {
+            echo "New record created successfully";
+            //query successful so redirect to login page
+            header("Location: ../login.php");
+        } else {
+            echo "Error: " . $query . "<br>" . $conn->error;
+        }
     //close connection
     mysqli_close($conn);
 ?>
