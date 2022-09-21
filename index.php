@@ -224,150 +224,12 @@ if (isset($_SESSION['username'])) {
 
     <!-- service section -->
 
-    <section class="service_section layout_padding">
-        <div class="service_container">
-            <div class="container ">
-                <div class="heading_container heading_center">
-                    <h2>
-                        Our <span>Services</span>
-                    </h2>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="images/s1.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Computer Repair
-                                </h5>
-                                <p>
-                                    fact that a reader will be distracted by the readable content of a page when looking
-                                    at its layout.
-                                    The
-                                    point of using
-                                </p>
-                                <a href="">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="images/s2.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Hardware Replacement
-                                </h5>
-                                <p>
-                                    fact that a reader will be distracted by the readable content of a page when looking
-                                    at its layout.
-                                    The
-                                    point of using
-                                </p>
-                                <a href="">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="images/s3.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Data Recovery
-                                </h5>
-                                <p>
-                                    fact that a reader will be distracted by the readable content of a page when looking
-                                    at its layout.
-                                    The
-                                    point of using
-                                </p>
-                                <a href="">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="images/s4.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    Software Update
-                                </h5>
-                                <p>
-                                    fact that a reader will be distracted by the readable content of a page when looking
-                                    at its layout.
-                                    The
-                                    point of using
-                                </p>
-                                <a href="">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-box">
-                    <a href="">
-                        See All
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- end service section -->
 
     <!-- about section -->
 
-    <section class="about_section">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                We Provide Best Service
-                            </h2>
-                        </div>
-                        <p>
-                            Fast Business Funding is a leading marketplace for business loans in the United States and
-                            Australia. The
-                            company helps small-to-medium businesses get the right funding solutions by matching them
-                            with optimal
-                            lenders in the quickest and simplest way possible.
-                            Fast Business Funding is rapidly growing with over 55,000 loyal customers registered through
-                            its platform.
-                        </p>
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img-box">
-                        <img src="images/about-img.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+  
     <!-- end about section -->
 
     <!-- why us section -->
@@ -566,46 +428,7 @@ if (isset($_SESSION['username'])) {
     <!-- end client section -->
 
     <!-- contact section -->
-    <section class="contact_section layout_padding">
-
-        <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    Contact Us
-                </h2>
-            </div>
-            <div class="row">
-                <div class="col-md-9 mx-auto">
-                    <div class="form_container">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="First Name" />
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Last Name" />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email" />
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Phone Number" />
-                                </div>
-                            </div>
-                            <div class="form-group ">
-                                <input type="text" class="message-box" placeholder="Message" />
-                            </div>
-                            <div class="btn-box">
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
     <!-- end contact section -->
 
 
