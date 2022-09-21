@@ -42,3 +42,4 @@ var_dump($_POST);
     header("Location: login.php");
     //close connection
     mysqli_close($conn);
+?>
