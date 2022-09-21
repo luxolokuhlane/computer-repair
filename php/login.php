@@ -5,7 +5,7 @@
 //compare this snippet from php\login.php:
     require_once('config.php');
     //get username from login.php
-    $username = $_POST['username'];
+    $username = $_POST['email'];
     //get password from login.php
     $password = $_POST['password'];
     $password = md5($password);
@@ -28,8 +28,9 @@
         //redirect to home page
         header("Location: ../index.php");
     } else {
-        //redirect to login page
-        header("Location: ../login.html");
+        echo $count;
+        // //redirect to login page
+        // header("Location: ../login.html");
     }
     //close connection
     mysqli_close($conn);
