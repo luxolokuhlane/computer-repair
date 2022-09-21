@@ -4,15 +4,16 @@ var_dump($_POST);
     //get password from signup.php
     $password = $_POST['password'];
     $password = md5($password);
-    
+
     //get username from signup.php
-    $firstname = $_POST['name'];
+    //uppercaser first letter of name
+    $firstname = ucwords($_POST['name']);
 
     //get email from signup.php
-    $email = $_POST['email'];
+    $email = strtolower($_POST['email']);
 
     //get name from signup.php
-    $lastname = $_POST['lastname'];
+    $lastname = ucwords($_POST['lastname']);
 
     //get phone from signup.php
     $phone = $_POST['phone'];
@@ -33,7 +34,7 @@ var_dump($_POST);
                     VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', '$type')";
     }elseif($type == 3){
     
-        $query = "INSERT INTO client (firstName, lastName, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+        $query = "INSERT INTO client (firstName, lastName, email, password, cellphoneNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
     }else{
         echo "Error";
     }
