@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 //login page
 //path: login.php
@@ -24,14 +24,15 @@
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $_SESSION['type'] = $row['technicianType'];
+        echo "<br>".$_SESSION['type'];
         $_SESSION['id'] = $row['technicianID'];
         //redirect to home page
         header("Location: ../index.php");
     } else {
         echo $count;
         // //redirect to login page
-        // header("Location: ../login.html");
+        header("Location: ../login.html");
     }
     //close connection
     mysqli_close($conn);
-// ?>
+// 
