@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<?php
+//session start
+session_start();
+?>
 
 <head>
     <!-- Basic -->
@@ -16,7 +20,8 @@
     <title>Tracork</title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- fonts style -->
@@ -42,21 +47,21 @@
                     <div class="top_nav_container">
                         <a class="navbar-brand d-none d-lg-flex" href="index.html">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
                         <div class="contact_nav">
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call : +01 123455678990
-                </span>
+                                    Call : +01 123455678990
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  Email : demo@gmail.com
-                </span>
+                                    Email : demo@gmail.com
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -67,16 +72,21 @@
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
                         <a class="navbar-brand d-lg-none" href="index.html">
                             <span>
-                Tracork
-              </span>
+                                Tracork
+                            </span>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
+                                <?php
+                                if (isset($_SESSION['userName'])) {
+                                ?>
                                 <li class="nav-item">
                                     <a class="nav-link pl-lg-0" href="index.html">Home </a>
                                 </li>
@@ -89,15 +99,30 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="why.html">Why Us</a>
                                 </li>
+
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span> </a>
+                                    <a class="nav-link" href="contacts.html">contact</a>
                                 </li>
+                                <?php
+                                } else {
+                                ?>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="login.php">login</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="signup.php">signup<span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <?php
+                                }
+                                ?>
                             </ul>
                             <from class="search_form">
                                 <input type="text" class="form-control" placeholder="Search here...">
                                 <button class="" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
                             </from>
                         </div>
                     </nav>
@@ -141,8 +166,9 @@
                                 <input type="password" class="form-control" name="" id="txtNewPassword" placeholder="">
                             </div>
                             <div class="form-group ">
-                                <label for="" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="" id="txtConfirmPassword" placeholder="">
+                                <label for="" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" name="" id="txtConfirmPassword"
+                                    placeholder="">
                                 <div id="divCheckPasswordMatch"></div>
                             </div>
                             <div class="btn-box">
@@ -166,7 +192,8 @@
                             About
                         </h4>
                         <p>
-                            Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                            Necessary, making this the first true generator on the Internet. It uses a dictionary of
+                            over 200 Latin words, combined with a handful
                         </p>
                         <div class="footer_social">
                             <a href="">
@@ -191,20 +218,20 @@
                         </h4>
                         <div class="footer_links">
                             <a class="active" href="index.html">
-                Home
-              </a>
+                                Home
+                            </a>
                             <a class="" href="service.html">
-                Services
-              </a>
+                                Services
+                            </a>
                             <a class="" href="about.html">
-                About
-              </a>
+                                About
+                            </a>
                             <a class="" href="why.html">
-                Why Us
-              </a>
+                                Why Us
+                            </a>
                             <a class="" href="contact.html">
-                Contact Us
-              </a>
+                                Contact Us
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -217,32 +244,32 @@
                             <p>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
-                  Location
-                </span>
+                                    Location
+                                </span>
                             </p>
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call +01 1234567890
-                </span>
+                                    Call +01 1234567890
+                                </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  demo@gmail.com
-                </span>
+                                    demo@gmail.com
+                                </span>
                             </a>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Mon-Sat: 09.00 am - 06.00 pm
-                </span>
+                                    Mon-Sat: 09.00 am - 06.00 pm
+                                </span>
                             </p>
                             <p>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span>
-                  Sunday: closed
-                </span>
+                                    Sunday: closed
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -282,20 +309,20 @@
 
 </body>
 <script>
-    //password verification
-    function checkPasswordMatch() {
-        var password = $("#txtNewPassword").val();
-        var confirmPassword = $("#txtConfirmPassword").val();
+//password verification
+function checkPasswordMatch() {
+    var password = $("#txtNewPassword").val();
+    var confirmPassword = $("#txtConfirmPassword").val();
 
-        if (password != confirmPassword)
-            $("#divCheckPasswordMatch").html("Passwords do not match!");
-        else
-            $("#divCheckPasswordMatch").html("Passwords match.");
-    }
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("<span style = 'color: red;'>Passwords do not match!</span>");
+    else
+        $("#divCheckPasswordMatch").html("<span style = 'color: green;'> Passwords match. </span>");
+}
 
-    $(document).ready(function() {
-        $("#txtConfirmPassword").keyup(checkPasswordMatch);
-    });
+$(document).ready(function() {
+    $("#txtConfirmPassword").keyup(checkPasswordMatch);
+});
 </script>
 
 </html>
