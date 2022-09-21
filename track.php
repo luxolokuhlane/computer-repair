@@ -139,26 +139,26 @@
 
     <!-- Tracking section -->
     <div class="container">
-        <div class="row">
+        <div class="row" style=" flex-wrap: inherit !important ;">
             <div class="col-12 col-md-10 hh-grayBox pt45 pb20">
                 <div class="row justify-content-between">
                     <div class="order-tracking completed">
                         <span class="is-complete"></span>
-                        <p>Ordered<br><span>Mon, June 24</span></p>
+                        <p>Device Recived<br><span>Mon, June 24</span></p>
                     </div>
                     <div class="order-tracking completed">
                         <span class="is-complete"></span>
-                        <p>Shipped<br><span>Tue, June 25</span></p>
+                        <p>Service in progress<br><span>Fri, June 28</span></p>
                     </div>
                     <div class="order-tracking">
                         <span class="is-complete"></span>
-                        <p>Delivered<br><span>Fri, June 28</span></p>
+                        <p>Ready for collection<br><span>Fri, June 28</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end contact section -->
+    <!-- end Track section -->
 
     <!-- footer section -->
     <footer class="footer_section">
