@@ -43,7 +43,7 @@ var_dump($_POST);
         ) {
             echo "New record created successfully";
             //query successful so redirect to login page
-            header("Location: ../login.php");
+            header("Location: ../login.html");
         } else {
             echo "Error: " . $query . "<br>" . $conn->error;
         }
