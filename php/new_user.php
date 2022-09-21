@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    require_once('config.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating new user</title>
-</head>
+    //get password from signup.php
+    $password = $_POST['txtNewPassword'];
+    $password = md5($password);
+    
+    //get username from signup.php
+    $firstname = $_POST['name'];
 
-<body>
+    //get email from signup.php
+    $email = $_POST['email'];
 
-</body>
+    //get name from signup.php
+    $lastname = $_POST['lastname'];
 
-</html>
+    //get phone from signup.php
+    $phone = $_POST['phone'];
+    
+    //signup type
+    $type = $_POST['type'];
+
+
+    //connect to database from config.php
+    $conn = mysqli_connect(HOST,USERNAME, PASSWORD, DATABASE) 
+    or die('Error connecting to MySQL server.');
+
+    if($type == 1 or $type == 2){
+        //insert new user into database
+        $query = "INSERT INTO technician (firstName, lastName, email, password, contactNumber, userType) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', $type)";
+    }elseif($type == 3){
+    
+        $query = "INSERT INTO client (firstname, lastname, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+    }else{
+        echo "Error";
+    }
+    
+    //execute query
+    mysqli_query($conn, $query) or die('Error adding user database.');
+    
+    //query successful so redirect to login page
+    header("Location: login.php");
+    //close connection
+    mysqli_close($conn);
