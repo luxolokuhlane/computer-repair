@@ -5,7 +5,7 @@
 //compare this snippet from php\login.php:
     require_once('config.php');
     //get username from login.php
-    $username = $_POST['email'];
+    $username = strtolower($_POST['email']);
     //get password from login.php
     $password = $_POST['password'];
     $password = md5($password);
