@@ -144,18 +144,18 @@ session_start();
             <div class="row">
                 <div class="col-md-9 mx-auto">
                     <div class="form_container">
-                        <form>
+                        <form action="new.php">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="First Name" />
+                                    <input type="text" class="form-control" id="name" placeholder="First Name" />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Last Name" />
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                    <input type="email" id="email" class="form-control" placeholder="Email" />
                                 </div>
                                 <div class="form-group col-md-6">
                                     <input type="text" class="form-control" placeholder="Phone Number" />
