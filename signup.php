@@ -143,11 +143,11 @@ session_start();
             <div class="row">
                 <div class="col-md-9 mx-auto">
                     <div class="form_container">
-                        <form action="new.php" method="post">
+                        <form action="php/newUser.php" method="post">
                             <div class="form-group col-md-6">
                                 <label for="type">UserType:</label>
 
-                                <select id="type">
+                                <select id="type" name="type" required>
                                     <option value="1">Admin</option>
                                     <option value="2">Technician</option>
                                     <option value="3">Customer</option>
@@ -155,28 +155,33 @@ session_start();
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="name" placeholder="First Name" />
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        placeholder="First Name" required />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" />
+                                    <input type="text" class="form-control" name="lastname" id="lastname"
+                                        placeholder="Last Name" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="email" id="email" class="form-control" placeholder="Email" />
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                        required />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Phone Number" />
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone Number"
+                                        id="phone" required />
                                 </div>
                             </div>
-                            <div class="form-group ">
-                                <label for="" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="" id="txtNewPassword" placeholder="">
+                            <div class=" form-group ">
+                                <label for="" class=" form-label">Password</label>
+                                <input type="password" class="form-control" name="password" id="txtNewPassword"
+                                    placeholder="" required>
                             </div>
                             <div class="form-group ">
                                 <label for="" class="form-label">Confirm Password</label>
                                 <input type="password" class="form-control" name="" id="txtConfirmPassword"
-                                    placeholder="">
+                                    placeholder="" required>
                                 <div id="divCheckPasswordMatch"></div>
                             </div>
                             <div class="btn-box">
