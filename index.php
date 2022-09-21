@@ -109,7 +109,7 @@ if (isset($_SESSION['username'])) {
                     }
                     ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="signup.php">new User<span class="sr-only">(current)</span>
+                                    <a class="nav-link" href="signup.php">New Customer<span class="sr-only">(current)</span>
                                     </a>
                                 </li>
                                 <?php
@@ -120,15 +120,13 @@ if (isset($_SESSION['username'])) {
                                 <?php              }
                   ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="contacts.html">contact</a>
+                                    <a class="nav-link" href="contacts.html">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="php/logout.php">Log Out</a>
                                 </li>
                             </ul>
-                            <from class="search_form">
-                                <input type="text" class="form-control" placeholder="Search here...">
-                                <button class="" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </from>
+        
                         </div>
                     </nav>
                 </div>
