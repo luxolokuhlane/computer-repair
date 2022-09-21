@@ -16,7 +16,8 @@
     <title>Tracork</title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- fonts style -->
@@ -71,7 +72,9 @@
                             </span>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""> </span>
                         </button>
 
@@ -80,40 +83,41 @@
                                 <?php
                                 if (isset($_SESSION['type'])) {
                                 ?>
-                                    <li class="nav-item">
-                                        <a class="nav-link pl-lg-0" href="index.php">Home </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="service.php">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about.php"> About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="why.php">Why Us</a>
-                                    </li>
-                                    <?php
+                                <li class="nav-item">
+                                    <a class="nav-link pl-lg-0" href="index.php">Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="service.php">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.php"> About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="why.php">Why Us</a>
+                                </li>
+                                <?php
                                     if ($_SESSION['type'] == 1) {
                                     ?>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="manage.php"> Manage</a>
-                                        </li>
-                                    <?php
+                                <li class="nav-item">
+                                    <a class="nav-link" href="manage.php"> Manage</a>
+                                </li>
+                                <?php
                                     }
                                     ?>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="signup.php">New Customer<span class="sr-only">(current)</span>
-                                        </a>
-                                    </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="signup.php">New Customer<span
+                                            class="sr-only">(current)</span>
+                                    </a>
+                                </li>
                                 <?php
                                 } else { ?>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="track.php">Track</a>
-                                    </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="track.php">Track</a>
+                                </li>
                                 <?php              }
                                 ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="contact.php">Contact</a>
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="php/logout.php">Log Out</a>
@@ -186,7 +190,8 @@
                             About
                         </h4>
                         <p>
-                            Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                            Necessary, making this the first true generator on the Internet. It uses a dictionary of
+                            over 200 Latin words, combined with a handful
                         </p>
                         <div class="footer_social">
                             <a href="">
@@ -222,7 +227,7 @@
                             <a class="" href="why.php">
                                 Why Us
                             </a>
-                            <a class="" href="contact.html">
+                            <a class="" href="contact.php">
                                 Contact Us
                             </a>
                         </div>

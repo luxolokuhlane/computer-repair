@@ -197,7 +197,7 @@
                             <a class="" href="why.php">
                                 Why Us
                             </a>
-                            <a class="" href="contact.html">
+                            <a class="" href="contact.php">
                                 Log In
                             </a>
                         </div>

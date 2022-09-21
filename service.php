@@ -113,7 +113,7 @@
                                 <?php              }
                                 ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="contact.php">Contact</a>
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="php/logout.php">Log Out</a>
@@ -278,7 +278,7 @@
                             <a class="" href="why.php">
                                 Why Us
                             </a>
-                            <a class="" href="contact.html">
+                            <a class="" href="contact.php">
                                 Contact Us
                             </a>
                         </div>
