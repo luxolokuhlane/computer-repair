@@ -25,11 +25,14 @@
     $conn = mysqli_connect(HOST,USERNAME, PASSWORD, DATABASE) 
     or die('Error connecting to MySQL server.');
 
-    if($type == 3 or $type == 2){
+    if($type == 1 or $type == 2){
         //insert new user into database
-        $query = "INSERT INTO technician (firstname, lastname, email, password, phone, usertype) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', $type)";
+        $query = "INSERT INTO technician (firstName, lastName, email, password, contactNumber, userType) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', $type)";
+    }elseif($type == 3){
+    
+        $query = "INSERT INTO client (firstname, lastname, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
     }else{
-        $query = "INSERT INTO customer (firstname, lastname, email, password, phone) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+        echo "Error";
     }
     
     //execute query
