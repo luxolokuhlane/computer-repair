@@ -1,8 +1,8 @@
 <?php
     require_once('config.php');
-
+var_dump($_POST);
     //get password from signup.php
-    $password = $_POST['txtNewPassword'];
+    $password = $_POST['password'];
     $password = md5($password);
     
     //get username from signup.php
@@ -27,10 +27,10 @@
 
     if($type == 1 or $type == 2){
         //insert new user into database
-        $query = "INSERT INTO technician (firstName, lastName, email, password, contactNumber, userType) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', $type)";
+        $query = "INSERT INTO technician (firstName, lastName, email, password, contactNumber, technicianType) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', '$type');";
     }elseif($type == 3){
     
-        $query = "INSERT INTO client (firstname, lastname, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+        $query = "INSERT INTO client (firstName, lastName, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone');";
     }else{
         echo "Error";
     }
