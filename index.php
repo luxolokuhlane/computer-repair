@@ -109,7 +109,8 @@ if (isset($_SESSION['username'])) {
                     }
                     ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="signup.php">New Customer<span class="sr-only">(current)</span>
+                                    <a class="nav-link" href="signup.php">New Customer<span
+                                            class="sr-only">(current)</span>
                                     </a>
                                 </li>
                                 <?php
@@ -120,13 +121,13 @@ if (isset($_SESSION['username'])) {
                                 <?php              }
                   ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="contacts.html">Contact</a>
+                                    <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="php/logout.php">Log Out</a>
                                 </li>
                             </ul>
-        
+
                         </div>
                     </nav>
                 </div>
@@ -222,12 +223,12 @@ if (isset($_SESSION['username'])) {
 
     <!-- service section -->
 
-    
+
     <!-- end service section -->
 
     <!-- about section -->
 
-  
+
     <!-- end about section -->
 
     <!-- why us section -->
@@ -426,7 +427,7 @@ if (isset($_SESSION['username'])) {
     <!-- end client section -->
 
     <!-- contact section -->
-  
+
     <!-- end contact section -->
 
 
