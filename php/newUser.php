@@ -34,7 +34,7 @@ var_dump($_POST);
                     VALUES ('$firstname', '$lastname', '$email', '$password', '$phone', '$type')";
     }elseif($type == 3){
     
-        $query = "INSERT INTO client (firstName, lastName, email, password, contactNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
+        $query = "INSERT INTO client (firstName, lastName, email, password, cellphoneNumber) VALUES ('$firstname', '$lastname', '$email', '$password', '$phone')";
     }else{
         echo "Error";
     }
