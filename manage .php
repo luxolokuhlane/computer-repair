@@ -16,7 +16,8 @@
     <title>Tracork</title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- fonts style -->
@@ -71,12 +72,17 @@
                             </span>
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""> </span>
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
+                                <?php
+                                if (isset($_SESSION['type'])) {
+                                ?>
                                 <li class="nav-item">
                                     <a class="nav-link pl-lg-0" href="index.php">Home </a>
                                 </li>
@@ -86,12 +92,35 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="about.html"> About</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="why.html">Why Us</a>
+                                </li>
+                                <?php
+                                    if ($_SESSION['type'] == 1) {
+                                    ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="manage.php"> Manage</a>
+                                </li>
+                                <?php
+                                    }
+                                    ?>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="why.html">Why Us <span class="sr-only">(current)</span>
+                                    <a class="nav-link" href="signup.php">New Customer<span
+                                            class="sr-only">(current)</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                <?php
+                                } else { ?>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="track.php">Track</a>
+                                </li>
+                                <?php              }
+                                ?>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="php/logout.php">Log Out</a>
                                 </li>
                             </ul>
                             <from class="search_form">
